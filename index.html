@@ -19,9 +19,9 @@
                     <img src="assets/imgs/icones/iconLogo.png" alt="">
                 </div>
                 <ul class="menu">
-                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#sobreNos">Sobre Nós</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="#">Localização</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
                 </ul>
                 <ul>
                     <li id="abrecarrinho"><img class="carrinho" src="assets/imgs/icones/carrinho.png" alt=""></li>
@@ -192,14 +192,14 @@
                         <div class="cardInf">
                             <p class="txtTitulo">Cokies Mármore</p>
                             <p class="txtValor">R$ 7,00 </p>
-                            <button>Adicionar ao carrinho</button>
+                            <button id="sobreNos">Adicionar ao carrinho</button>
                         </div>
                     </div>
 
                 </section>
             </section>
         </section>
-        
+
         <aside class="compraConcluida sec">
             <div class="Concluida">
                 <h1>Compra Concluída Com Sucesso!</h1>
@@ -207,6 +207,39 @@
                 <img src="assets/imgs/icones/positive-vote.png" alt="">
             </div>
         </aside>
+        <section class="sobreNos sec" >
+            <h1>Sobre Nós</h1>
+            <div class="sobreNos-content">
+                <div class="sobreNos-img">
+                    <img src="assets/confeiteiro-feminino-com-misturador-em-uma-pastelaria.jpg" alt="">
+                </div>
+                <div class="sobreNos-text">
+                    <p>Na Cakes Enable, somos apaixonados por criar bolos e doces que encantam os sentidos. Nossa missão
+                        é
+                        proporcionar momentos de felicidade através de sabores irresistíveis e apresentações
+                        deslumbrantes.
+                        Com
+                        ingredientes frescos e receitas artesanais, cada criação é feita com amor e dedicação. Seja para
+                        uma
+                        celebração especial ou para adoçar o dia a dia, estamos aqui para tornar seus desejos doces
+                        realidade.</p>
+                    <div class="contato">
+                        <a class="btWhats" href="">whatsap</a>
+                        <a class="btInsta" href="">instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec" id="localizacao">
+            <h1>Onde Estemos Localizados</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2028.2590821764304!2d-42.77262616618111!3d-5.079554681411838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1748635309195!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><span style="font-weight: bold;">📍 Localização:</span>
+                Avenida Frei Serafim, nº 456, Centro, Teresina - PI
+                CEP: 64000-100</p>
+        </section>
     </main>
     <script src="assets/script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -232,7 +265,7 @@
         });
 
         function animarMaisInfs() {
-            document.querySelectorAll('.maisInfs .cdinf').forEach(function(cdinf) {
+            document.querySelectorAll('.maisInfs .cdinf').forEach(function (cdinf) {
                 const rect = cdinf.getBoundingClientRect();
                 if (rect.top < window.innerHeight - 60) {
                     cdinf.classList.add('p-animar');
@@ -257,36 +290,7 @@
             animarBanner();
         });
     </script>
-    <section class="sobreNos sec">
-        <h1>Sobre Nós</h1>
-        <div class="sobreNos-content">
-            <div class="sobreNos-img">
-                <img src="assets/confeiteiro-feminino-com-misturador-em-uma-pastelaria.jpg" alt="">
-            </div>
-            <div class="sobreNos-text">
-                <p>Na Cakes Enable, somos apaixonados por criar bolos e doces que encantam os sentidos. Nossa missão é
-                    proporcionar momentos de felicidade através de sabores irresistíveis e apresentações deslumbrantes.
-                    Com
-                    ingredientes frescos e receitas artesanais, cada criação é feita com amor e dedicação. Seja para uma
-                    celebração especial ou para adoçar o dia a dia, estamos aqui para tornar seus desejos doces
-                    realidade.</p>
-                <div class="contato">
-                    <a href="">whatsap</a>
-                    <a href="">instagram</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec" id="localizacao">
-            <h1>Onde Estemos Localizados</h1>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2028.2590821764304!2d-42.77262616618111!3d-5.079554681411838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1748635309195!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p><span style="font-weight: bold;">📍 Localização:</span>
-                Avenida Frei Serafim, nº 456, Centro, Teresina - PI
-                CEP: 64000-100</p>
-        </section>
+
     <footer>
         <p>© - direitos reservados</p>
     </footer>

@@ -69,15 +69,35 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    
+    font-weight: bold;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     font-family: inter;
     color: black;
-    border-bottom: #ddd solid 3px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0;
 }
+
+.menu li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), left 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 .sec {
     font-family: inter;
     border-bottom: #00000029 solid 1px;
@@ -571,11 +591,14 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-    box-shadow: 0 0 5px black;
+    border: solid 1px rgba(0, 0, 0, 0.611);
+   
 }
 
 .card:hover {
-    transform: translateY(-5px);
+     box-shadow: 0 0 5px black;
+     transition: transform 0.3s ease;
+    transform: scale(1.02);
 }
 
 
@@ -715,13 +738,39 @@ body {
     gap: 10px;
 }
 .contato a{
-    background-color: #007190;
     color: white;
     width: 100%;
 
     text-decoration: none;
     padding: 10px 20px;
     text-align: center;
+}
+
+.btWhats{
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+}
+.contato a:hover{
+    background-color: #06a200;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.btInsta{
+    gradient: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+}
+
+.btInsta:hover{
+    background: linear-gradient(to right, #6e00b8, #fe0000, #ff9500);
+    color: #ffffff;
+    transition: background-color 0.3s ease;
 }
 
 footer {
